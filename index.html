@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
+    <title> Encanadores - Mario & Luigi</title>
+</head>
+
+<body>
+
+        <div class="caixa-video-mario">
+            <video src="imagens/video.mp4" autoplay muted loop></video>
+                <div class="mascara-video"></div>
+        </div>
+
+    <div class="caixa-principal">
+        <img src="imagens/logo.png" alt="logo do super Mario" class="logo-mario">
+            <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+                <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi! </p>
+        <button onclick="cliqueNoBotao()">Fale Conosco</button>
+    </div>
+    
+
+        <img src="imagens/mario.png" alt="logo mario e Luigi" class="imagem-mario-luigi">
+
+
+            <form class="fale-conosco" action="https://formsubmit.co/rickymoraesdasilva@gmail.com" method="POST">
+                <h1>Fale Conosco</h1>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
+                <input type="hidden" name="_captcha" value="false">
+               <!--<input type="hidden" name="_autoresponse" value="Formulário enviado com Sucesso!"> -->
+                <input placeholder="Seu Nome" type="text" name="Nome">
+                <input placeholder="Seu Telefone" type="tel" name="Telefone">
+                <input placeholder="Seu Email" type="email" name="email">
+                <textarea placeholder="Digite Sua Informação" name="Informação"></textarea>
+                <button onclick="sumirformulario()">Enviar Formulário</button>
+            </form>
+
+            <div class="mascara-form"></div>
+
+            
+
+</body>
+
+<script>
+    let formulario = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+
+    function cliqueNoBotao(){
+        formulario.style.left = "560px"
+        mascara.style.visibility = "visible"
+
+    } 
+
+    function sumirformulario(){
+        formulario.style.left = "-260px"
+        mascara.style.visibility = "hidden"
+        
+        alert("Formulário enviado com sucesso!")
+    }
+
+
+</script>
+
+</html>
